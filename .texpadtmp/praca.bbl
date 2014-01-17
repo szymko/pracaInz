@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{loadTime}
+\url{http://analytics.blogspot.in/2012/04/global-site-speed-overview-how-fast-are.html}.
+
+\bibitem{webCrawling}
+Carlos Castillo and Ricardo Baeza-Yates.
+\newblock {\em Web Crawling}.
+\newblock Universitat Pompeu Fabra.
+\newblock \url{http://grupoweb.upf.es/WRG/course/slides/crawling.pdf}.
+
+\bibitem{freshAge}
+Junghoo Cho and Hector~Garcia Molina.
+\newblock Effective page refresh policies for web crawlers.
+\newblock {\em {ACM} {T}ransactions on {D}atabase {S}ystems}, 28(4), 2008.
+
+\bibitem{DigUni}
+John Gantz and David Reinsel.
+\newblock The digital universe decade – are you ready?
+\newblock
+  \url{http://www.emc.com/collateral/analyst-reports/idc-digital-universe-are-you-ready.pdf},
+  2010.
+
+\bibitem{spiderTraps}
+Padmini~Srinivasan Gautam~Pant and Filippo Menczer.
+\newblock Crawling the {W}eb.
+\newblock
+  \url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.62.4776&rep=rep1&type=pdf}.
+
+\bibitem{DMining}
+Michael J.A.~Berry Gordon~S.Linoff.
+\newblock {\em Data Mining Techniques}.
+\newblock Wiley, third edition, 2011.
+
+\bibitem{Horzyk}
+Adrian Horzyk.
+\newblock {\em Sztuczne systemy skojarzeniowe i asocjacyjna sztuczna
+  inteligencja}.
+\newblock Akademicka Oficyna Wudawnicza Exit, Warszawa, 2013.
+
+\bibitem{webMining}
+Bing Liu.
+\newblock {\em Web Data Mining}.
+\newblock Springer, second edition, 2011.
+
+\bibitem{biasedCrawlers}
+Marian Boguna Santo Fortunato Alessandro~Vespignani M.~Angeles~Serrano,
+  Ana~Maguitman.
+\newblock Decoding the structure of the www: facts versus sampling biases.
+\newblock {\em ACM Transactions on the Web}, 1(10), 2007.
+
+\bibitem{lemStem}
+Dariusz Mrozek.
+\newblock Wyszukiwanie pełnotekstowe.
+\newblock \url{http://zti.polsl.pl/bdusm/BD3_FTS.pdf}.
+
+\bibitem{BrinLawrence}
+Brin S. and P.~Lawrence.
+\newblock The anatomy of a large-scale hypertextual web search engine.
+\newblock {\em Computer {N}etworks}, 30(1-7):107--117, 1998.
+
+\bibitem{FocusedCrawlers}
+Martin van den~Berg Soumen~Chakrabarti and Byron Dom.
+\newblock Focused crawling: a new approach to topic-specific web resource
+  discovery.
+\newblock {\em Computer {N}etworks}, 31(11-16):1623--1640, 1999.
+
+\bibitem{InfOver}
+Jonathan~B. Spira.
+\newblock {Information Overload: Now 900 Billion – What is Your
+  Organization’s Exposure?}
+\newblock \url{http://bit.ly/1coHvYF}, 2008.
+
+\end{thebibliography}

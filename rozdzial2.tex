@@ -9,7 +9,7 @@ Zadanie, które wykonują roboty internetowe jest tylko z pozoru proste. W istoc
 
 %------------------------------------------------------------------------------------------------------------------------------------------------------
 
-\section{Zasosowania robotów internetowych}
+\section{Zasotsowania robotów internetowych}
 \label{sec:podzialRobotow}
 Roboty internetowe można podzielić, wg wykonywanego zadania i zastosowań. Wszystkie kategorie charakteryzują się podobnym algorytmem pobierania stron, główne różnice wynikają z wyboru listy adresów do odwiedzenia, jak i ze sposobów priorytetyzacji pobierania informacji z posiadanej kolekcji URLi.
 
@@ -42,7 +42,7 @@ To zastosowanie związane jest z administracją dużymi serwisami. Robot odwiedz
 \section{Działanie pająka internetowego}
 \label{sec:dzialaniePajaka}
 
-Diagram blokowy 2.1 przedstawia sekwencyjny algorytm działania pająka internetowego. Jest on bardzo prosty i nie nadaje się do zastosowań produkcyjnych, jednak ilustruje podstawowe koncepty charakterystyczne dla tego typu zagadnień. Głównym zarzutem wobec tej struktury jest brak współbieżności, każda strona jest pobierana i przetwarzana sekwencyjnie. Jak wynika z raportu Google mediana czasu ładowania pojedynczej strony internetowej wynosi powyżej 2 s\cite{loadTime}, można się zatem spodzieać, iż będzie to operacja najdłużej trwająca spośród przedstawionych na schemacie.
+Diagram blokowy 2.1 przedstawia sekwencyjny algorytm działania pająka internetowego. Jest on bardzo prosty i nie nadaje się do zastosowań produkcyjnych, jednak ilustruje podstawowe koncepty charakterystyczne dla tego typu zagadnień. Głównym zarzutem wobec tej struktury jest brak współbieżności, każda strona jest pobierana i przetwarzana sekwencyjnie. Jak wynika z raportu Google(\url{http://analytics.blogspot.in/2012/04/global-site-speed-overview-how-fast-are.html}) mediana czasu ładowania pojedynczej strony internetowej wynosi powyżej 2 s, można się zatem spodzieać, iż będzie to operacja najdłużej trwająca spośród przedstawionych na schemacie.
 
 %%-----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -176,16 +176,16 @@ Poniżej przytoczona zostaje zbiorcza charakterystyka zmian w różnych podzbior
 \cline{1-2}
 Podzbiór    & Obserwacje \\
 \hline
-360 losowych stron & mediana życia strony około 2.5 roku, \\
+360 losowych stron & mediana życia strony\(\approx\) 2.5 roku, \\
 &33\% było wciąż dostępnych po 6 latach \\
 \hline
-500 stron & mediana życia strony około 4.5 roku \\
+500 stron & mediana życia strony \(\approx\) 4.5 roku \\
 (arykułów naukowych on-line)&\\
 \hline
-2 500 stron & średnia długość życia około 50 dni \\
-& mediana wieku około 50 dni \\
+2 500 stron & średnia długość życia \(\approx\) 50 dni \\
+& mediana wieku \(\approx\) 50 dni \\
 \hline
-4 200 stron & mediana życia strony około 4 lat \\
+4 200 stron & mediana życia strony \(\approx\) 4 lat \\
 (artykułów naukowych on-line) &\\
 \hline
 720 000 stron & średnia długość życia między 60, a 240 dni.\\
@@ -207,7 +207,7 @@ Podzbiór    & Obserwacje \\
 & na 30\% stron zachodzą jedynie niewielkie zmiany\\
 & duża wariacja dostępności, w zależności od domeny\\
 \hline
-800 milionów stron & średnia długość życia około 140 dni\\
+800 milionów stron & średnia długość życia \(\approx\) 140 dni\\
 \hline
 \end{tabular} 
 \end{table}
@@ -220,4 +220,85 @@ kolekcję danych w sposób optymalny.
 
 \section{Kwestie etyczne}
 \label{sec:etyczne}
+Jak wspomniano wcześniej, crawlery używane są w wielu przydatnych zastosowaniach. W związku z tym inwestuje się wiele czasu i pracy w zoptymalizowanie
+ich działania, od prostych zabiegów pobierania stron asynchronicznie, po zaawansowane technki modelowania rozkładu prawdopodobieństwa zmian na stronie.
+Nie należy jednak zapominać, iż działalność prfesjonalnych, bardzo wydajnych robotów internetowych nie pozostaje obojętna dla innych użytkowników 
+sieci. Ruch generowany w ten sposób może znacznie obciążać serwery pobieranych stron, powodując kłopoty dla ich administratorów i klientów.
+Z tego powodu wprowadzono podstawowe zasady, którymi powinien kierować się każdy projektant oprogramowania trawersującego sieć. W momencie pisania
+tej pracy nie mają one podstaw prawnych, ale łamiąc je notorycznie można liczyć się z potępieniem środowiska i poważniejszymi konsekwencjami, jak np.~zablokowaniem
+puli adresów IP, z których korzysta nieposłuszny robot.
+
+%------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Identyfikacja}
+\label{subsec:identyfikacja}
+
+Administratorzy stron zazwyczaj zbierają informacje o ruchu, unikalnych użytkownikach, w których dane o działalności robotów nie są zazwyczaj przydatnymi
+informacjami. Aby ułatwić identyfikację robotów, zaleca się umieszczenie w polu nagłówka zapytania HTTP \texttt{user-agent} nazwy crawlera i adresu
+strony internetowej zawierającej infomracje o samym robocie oraz dane kontaktowe organizacji odpowiedzialnej za jego działanie.
+
+%------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Robot exclusion protocol}
+\label{subsec:robotExcl}
+
+W celu zapewnienia kontroli nad zasobami, do których dostęp mają roboty internetowe, wpropwadzono protokół podstron wykluczonych z indeksowania
+\emph{ang. robot exclusion protocol}. Przyjmuje on formę statycznej strony internetowej serwowanej przez lokalny dla adres URL 
+\url{/robots.txt} \cite{robotsTxt}. Każda linia powinna mieć następujący format: \texttt{<pole>:<opcjonalnaspacja><wartosc><opcjonalnaspacja>}.
+Wg oficjalnej strony \cite{robotsTxt} \texttt{pole} może być zasąpione przez dwa ciągi znaków:
+\begin{itemize}
+    \item \texttt{User-agent:} - ciąg znaków odnoszący się do wartość nagłówka \texttt{user-agent} w zapytaniu. Podana dalej wartość identyfikuje
+     poszczególne roboty, lub ich grupy. Oznaczanie grup robotów jest możliwe dzięki znakowi szczególnemu ``*'', który oznacza zero lub więcej
+     wystąpień dowolnego znaku. Po linii zawierającej to pole następuje jedna lub więcej reguł dostępu do witryny. 
+    \item \texttt{Disallow:} - dyrektywa odnosząca się do stron, których crawler nie powinien odwiedzać. Wartość specyfikuje pojedynczy adres URL, lub
+     ich grupę wyłączoną z indeksacji.
+\end{itemize}
+Plik \url{robots.txt} może zawierać również komentarze, rozpoczynane są one znakiem ``\#''. Wszystkie znaki następujące później są ignorowane.
+Dodatkowe reguły, respektowane przez niektóre roboty znaleźć można na ich stronach internetowych. Dla przykładu strona \url{https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt}
+przybliża sposób parsowania pliku \url{robots.txt} przez robota internetowego firmy Google. Ponadto wprowadza ona możliwość grupowania ciągów identyfikujących
+pole \texttt{user-agent} i stosowanie zbioru reguł do całej grupy. Wprowadzona zostaje również dyrektywa \texttt{allow} pozwalająca wyszczególnić
+strony, które robot może odwiedziać.
+
+Poniżej znajdują się przykłady zastosowania przedstawionych wcześniej reguł, zaczerpnięte z \cite{robotsTxt}:
+
+\begin{lstlisting}[frame=single]
+# robots.txt for http://www.example.com/
+
+User-agent: *
+Disallow: /cyberworld/map/
+Disallow: /tmp/ # these will soon disappear
+Disallow: /bar.pdf
+\end{lstlisting}
+
+W tym przypadku żaden robot nie powinien odwiedzać adresu URL zaczynającego się od \url{/cyberworld/map/}, \url{/tmp/} lub \url{/bar.pdf}.
+
+\begin{lstlisting}[frame=single]
+User-agent: cybermapper
+Disallow:
+
+# go away
+User-agent: *
+Disallow: /
+\end{lstlisting}
+
+Natomiast ten plik pozwala na dostęp do strony tylko robotowi \texttt{cybermapper}.
+
+Ograniczanie dostępu można uzyskać również poprzez umieszczenie w meta tagach HTML klucza \texttt{robots} i wartości
+\texttt{noindex} zabraniającej indeksowania danego dokumentu i\textbackslash lub \texttt{nofollow} zabraniającej ściąganie stron linkowanych w 
+dokumencie. Natomiast wartość \texttt{nocache} pozwala na pobranie i indeksację dokumentu, jednak nie wyraża zgody na pokazywanie lokalnej kopii
+użytkownikom usługi wykorzystującej crawler.
+
+%------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Minimalny czas pomiędzy zapytaniami}
+\label{subsec:minCzas}
+Aby zniwelować obciążenie związane z działalnością crawlerów wprowadza się wymóg minimalnej ilości czasu, która musi upłynąc między dwoma
+zapytaniami do tej samej domeny. Spotykane w literaturze propozycje wahają się od 60 do 1 sekundy. Niektóre roboty stosują algorytmy adaptacyjne,
+uzależniające odstęp między kolejnymi zapytaniami od szybkości odpowiedzi serwisu \cite{webCrawling}.
+
+
+
+
+
+
 

@@ -3,7 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: praca.aux
 A level-1 auxiliary file: rozdzial1.aux
 A level-1 auxiliary file: rozdzial2.aux
-A level-1 auxiliary file: rozdzial3.aux
 A level-1 auxiliary file: rozdzial4.aux
 A level-1 auxiliary file: rozdzial5.aux
 A level-1 auxiliary file: rozdzial6.aux
@@ -16,52 +15,51 @@ Too many commas in name 1 of "M. Angeles Serrano, Ana Maguitman, Marian Boguna, 
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "M. Angeles Serrano, Ana Maguitman, Marian Boguna, Santo Fortunato, Alessandro Vespignani" for entry biasedCrawlers
 while executing---line 1049 of file plain.bst
-Warning--to sort, need author or key in loadTime
 Too many commas in name 1 of "M. Angeles Serrano, Ana Maguitman, Marian Boguna, Santo Fortunato, Alessandro Vespignani" for entry biasedCrawlers
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "M. Angeles Serrano, Ana Maguitman, Marian Boguna, Santo Fortunato, Alessandro Vespignani" for entry biasedCrawlers
 while executing---line 1090 of file plain.bst
 Name 1 in "Soumen Chakrabarti, Martin van den Berg, and Byron Dom" has a comma at the end for entry FocusedCrawlers
 while executing---line 1090 of file plain.bst
-You've used 13 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            586 strings with 5926 characters,
-and the built_in function-call counts, 3102 in all, are:
-= -- 294
-> -- 121
+            599 strings with 6108 characters,
+and the built_in function-call counts, 3654 in all, are:
+= -- 344
+> -- 153
 < -- 0
-+ -- 51
-- -- 36
-* -- 157
-:= -- 531
-add.period$ -- 38
-call.type$ -- 13
-change.case$ -- 54
++ -- 64
+- -- 46
+* -- 184
+:= -- 640
+add.period$ -- 46
+call.type$ -- 15
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 122
-empty$ -- 288
-format.name$ -- 36
-if$ -- 660
+cite$ -- 15
+duplicate$ -- 148
+empty$ -- 327
+format.name$ -- 46
+if$ -- 768
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 10
-newline$ -- 67
-num.names$ -- 24
-pop$ -- 82
+int.to.str$ -- 15
+missing$ -- 14
+newline$ -- 79
+num.names$ -- 30
+pop$ -- 95
 preamble$ -- 1
-purify$ -- 44
+purify$ -- 53
 quote$ -- 0
-skip$ -- 96
+skip$ -- 108
 stack$ -- 0
-substring$ -- 115
-swap$ -- 14
+substring$ -- 126
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
-warning$ -- 1
-while$ -- 26
-width$ -- 15
-write$ -- 133
+type$ -- 50
+warning$ -- 0
+while$ -- 32
+width$ -- 17
+write$ -- 158
 (There were 6 error messages)

@@ -1,8 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{loadTime}
-\url{http://analytics.blogspot.in/2012/04/global-site-speed-overview-how-fast-are.html}.
-
 \bibitem{webCrawling}
 Carlos Castillo and Ricardo Baeza-Yates.
 \newblock {\em Web Crawling}.
@@ -37,6 +34,21 @@ Adrian Horzyk.
 \newblock {\em Sztuczne systemy skojarzeniowe i asocjacyjna sztuczna
   inteligencja}.
 \newblock Akademicka Oficyna Wudawnicza Exit, Warszawa, 2013.
+
+\bibitem{graphDb}
+Jim~Webber Ian~Robinson and Emil Eifrem.
+\newblock {\em Graph {D}atabases}.
+\newblock O'{R}eilly, 2013.
+
+\bibitem{neo4jAction}
+Aleksa~Vukotic Jonas~Partner and Nicki Watt.
+\newblock {\em Neo4j in {A}ction}.
+\newblock Manning Publications, 2012.
+
+\bibitem{robotsTxt}
+Martijn Koster.
+\newblock {\em A Standard for {R}obot {E}xclusion}, 1994.
+\newblock \url{http://www.robotstxt.org/orig.html}.
 
 \bibitem{webMining}
 Bing Liu.

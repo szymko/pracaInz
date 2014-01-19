@@ -21,45 +21,45 @@ Too many commas in name 1 of "M. Angeles Serrano, Ana Maguitman, Marian Boguna, 
 while executing---line 1090 of file plain.bst
 Name 1 in "Soumen Chakrabarti, Martin van den Berg, and Byron Dom" has a comma at the end for entry FocusedCrawlers
 while executing---line 1090 of file plain.bst
-You've used 16 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            605 strings with 6198 characters,
-and the built_in function-call counts, 3869 in all, are:
-= -- 363
-> -- 160
+            599 strings with 6108 characters,
+and the built_in function-call counts, 3654 in all, are:
+= -- 344
+> -- 153
 < -- 0
-+ -- 67
-- -- 48
-* -- 192
-:= -- 678
-add.period$ -- 49
-call.type$ -- 16
-change.case$ -- 66
++ -- 64
+- -- 46
+* -- 184
+:= -- 640
+add.period$ -- 46
+call.type$ -- 15
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 160
-empty$ -- 349
-format.name$ -- 48
-if$ -- 814
+cite$ -- 15
+duplicate$ -- 148
+empty$ -- 327
+format.name$ -- 46
+if$ -- 768
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 16
-newline$ -- 84
-num.names$ -- 32
-pop$ -- 103
+int.to.str$ -- 15
+missing$ -- 14
+newline$ -- 79
+num.names$ -- 30
+pop$ -- 95
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 53
 quote$ -- 0
-skip$ -- 114
+skip$ -- 108
 stack$ -- 0
-substring$ -- 131
-swap$ -- 18
+substring$ -- 126
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
+type$ -- 50
 warning$ -- 0
-while$ -- 34
-width$ -- 18
-write$ -- 168
+while$ -- 32
+width$ -- 17
+write$ -- 158
 (There were 6 error messages)

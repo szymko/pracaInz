@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.18)  19 JAN 2014 03:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.18)  19 JAN 2014 15:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -511,7 +511,11 @@ File: lstlang3.sty 2004/09/05 1.3 listings language file
 LaTeX Warning: Unused global option(s):
     [11pt].
 
-(/Users/szymek/Documents/Praca inz/.texpadtmp/praca.aux (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial1.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial2.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial4.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial5.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial6.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial7.aux))
+(/Users/szymek/Documents/Praca inz/.texpadtmp/praca.aux (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial1.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial2.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial4.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial5.aux
+
+LaTeX Warning: Label `subs:instalacjaMri' multiply defined.
+
+) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial6.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial7.aux))
 \openout1 = `praca.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
@@ -864,25 +868,71 @@ Underfull \hbox (badness 7151) in paragraph at lines 92--95
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2004/09/05 1.3 listings language file
-) [32 <./mri.jpeg>]) [33]
+) [32 <./mri.jpeg>] [33]
+Underfull \hbox (badness 4036) in paragraph at lines 163--169
+[]\T1/ptm/m/n/10.95 Aby uru-cho-mi¢ ro-bota in-ter-ne-to-wego na-le»y w ka-ta-logu pro-jektu wy-ko-na¢ po-le-ce-nie \T1/pcr/m/n/10.95 $
+ []
+
+<mri_schema.jpeg, id=134, 1694.33pt x 600.2425pt>
+File: mri_schema.jpeg Graphic file (type jpg)
+ <use mri_schema.jpeg>
+Package pdftex.def Info: mri_schema.jpeg used on input line 176.
+(pdftex.def)             Requested size: 455.24411pt x 161.27081pt.
+
+
+LaTeX Warning: Command \l invalid in math mode on input line 183.
+
+
+LaTeX Warning: Command \k invalid in math mode on input line 183.
+
+Missing character: There is no ª in font cmr10!
+Missing character: There is no ¡ in font cmr10!
+[34 <./mri_schema.jpeg>]
+Underfull \hbox (badness 1715) in paragraph at lines 208--209
+[]\T1/ptm/m/n/10.95 Pobranie nie-opu-bli-ko-wa-nego(flaga \T1/pcr/m/n/10.95 opublikowana \T1/ptm/m/n/10.95 ma war-to±¢ FALSE) re-kordu z ta-bel
+ []
+
+[35] <mri_przeplyw_1.jpeg, id=141, 1680.2775pt x 2258.4375pt>
+File: mri_przeplyw_1.jpeg Graphic file (type jpg)
+ <use mri_przeplyw_1.jpeg>
+Package pdftex.def Info: mri_przeplyw_1.jpeg used on input line 222.
+(pdftex.def)             Requested size: 455.24411pt x 611.8884pt.
+ <neo4j.jpeg, id=142, 2030.58624pt x 978.65625pt>
+File: neo4j.jpeg Graphic file (type jpg)
+ <use neo4j.jpeg>
+Package pdftex.def Info: neo4j.jpeg used on input line 236.
+(pdftex.def)             Requested size: 446.73036pt x 215.30504pt.
+
+Underfull \vbox (badness 1990) has occurred while \output is active []
+
+ [36 <./mri_przeplyw_1.jpeg>] [37 <./neo4j.jpeg>] [38] <logic_graph.jpeg, id=153, 1867.97874pt x 1199.48125pt>
+File: logic_graph.jpeg Graphic file (type jpg)
+ <use logic_graph.jpeg>
+Package pdftex.def Info: logic_graph.jpeg used on input line 328.
+(pdftex.def)             Requested size: 455.24411pt x 292.31061pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [39] [40 <./logic_graph.jpeg>]
 \openout2 = `rozdzial6.aux'.
 
- (./rozdzial6.tex [34
+ (./rozdzial6.tex
+Rozdzia\l  5.
+) [41
 
 
 
 ]
-Rozdzia\l  5.
-) [35]
 \openout2 = `rozdzial7.aux'.
 
- (./rozdzial7.tex [36
+ (./rozdzial7.tex [42
 
 
 
 ]
 Rozdzia\l  6.
-) [37] (/Users/szymek/Documents/Praca inz/.texpadtmp/praca.bbl [38
+) [43] (/Users/szymek/Documents/Praca inz/.texpadtmp/praca.bbl [44
 
 
 ]
@@ -905,24 +955,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--26
 \T1/pcr/m/n/10.95 / / citeseerx . ist . psu . edu / viewdoc / download ? doi = 10 . 1 . 1 . 62 . 4776&rep =
  []
 
-[39]) [40] (/Users/szymek/Documents/Praca inz/.texpadtmp/praca.aux (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial1.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial2.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial4.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial5.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial6.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial7.aux))
+[45]) [46] (/Users/szymek/Documents/Praca inz/.texpadtmp/praca.aux (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial1.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial2.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial4.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial5.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial6.aux) (/Users/szymek/Documents/Praca inz/.texpadtmp/rozdzial7.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 7144 strings out of 493315
- 94893 string characters out of 6137903
- 203429 words of memory out of 5000000
- 10360 multiletter control sequences out of 15000+600000
+ 7190 strings out of 493315
+ 95725 string characters out of 6137903
+ 205578 words of memory out of 5000000
+ 10402 multiletter control sequences out of 15000+600000
  78503 words of font info for 81 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,22n,45p,859b,1274s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,22n,45p,859b,1822s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/szymek/Documents/Praca inz/.texpadtmp/praca.pdf" (39 pages, 992440 bytes).
+Output written on "/Users/szymek/Documents/Praca inz/.texpadtmp/praca.pdf" (45 pages, 1437017 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -313,12 +313,73 @@ Zbiór sekwencji uczących jest podstawowym nośnikiem wiedzy skojarzeniowej i m
 
 Budowa grafu ANAKG zaczyna się od zdefiniowania sekwencji uczącej $S \in \mathbb{S}$ i pustego grafu ANAKG. Następnie rozpoczynana jest symulacja dyskretna z krokiem $\Delta t$, 
 \begin{equation}
+\label{eq:anakg}
 \begin{cases}
     t_0 = 0 \\
     t_i = t_0 + \Delta t * i \\
     t_{max} = t_0 + \Delta t * card(S)
 \end{cases}
 \end{equation}
+
+W chwili $t_i$ podawany jest na wejście ANAKG $i$-ty element sekwencji uczącej, powodując utworzenie lub aktywację odpowiadającego mu neuronu.
+Taka aktywacja nazywana jest \textbf{aktywacją zewnętrzną}, w przeciwieństwie do \textbf{aktywacji wewnętrznej} spowodowanej sygnałami płynącymmi od
+sąsiadujących neuronów. Na podstawie czasu, który upłynął między aktywacjami poszczególnych neuronów można określić tzw. \textbf{współczynnik~aktywności}W
+połączenia.
+
+\begin{definicja}
+    \label{def:wspAkt}
+    \textbf{Współczynnik aktywności} połączenia między neuronem presynaptycznym $SN$ akytwowanym w chwili $t_{presyn}$, a neuronem postsynaptycznym 
+    $\widehat{SN}$ aktywowanym w chwili $t_{postsyn}$ definiujemy jako \cite[s. 224]{Horzyk}:
+    \begin{equation}
+        \begin{cases}
+            \delta_{SN, \widehat{SN}}^{act} = \delta_{SN, \widehat{SN}}^{act} + \frac {1}{\tau}\\
+            \tau = t_{postsyn} - t_{presyn}
+        \end{cases}
+    \end{equation}
+\end{definicja}
+
+Ze względu na sepcyfikę symulacji \ref{eq:anakg} stopień asocjacji ACON jest równy $\tau$. Mimo iż teoretycznie można tworzyć połączenia o dowolnym stopniu asocjacji, tj.~traktować
+całą sekwencję uczącą jako jeden kontekst, proponuje się jego ograniczenie \cite{Horzyk}. Pozwala to na modelowania uogólniania i skończonej pojemności pamięci występującej
+u organizmów żywych. Dzięki ograniczonemu kontekstowi zmniejsza się również komplikacja grafu i nie tworzone są powiązania pomiędzy niezwiązanymi ze sobą neuronami.
+
+W ramach kontekstu definiowane są połączenie między następującymi po sobie neruonami. Ich wagi mogą być obliczone na podstawie zależności \cite[s. 226]{Horzyk}:
+
+\begin{equation}
+\begin{cases}
+w_{SN, \widehat{SN}}^{ACON} = \frac{2 \delta_{SN, \widehat{SN}}^{act}}{\eta_{SN}^{act} + \delta_{SN, \widehat{SN}}^{act}}\\
+\delta_{SN, \widehat{SN}}^{act} = \sum\limits_{(\leadsto ACON_{\tau}:SN \leadsto \dots \leadsto \widehat{SN} \in AAT)} \frac{1}{\tau}
+\end{cases}
+\end{equation}
+gdzie 
+\begin{description}
+    \item $\eta_{SN}^{act}$ - ilość aktywacji neuronu $SN$ dla określonego zbioru sekwencji uczących $\mathbb{S}$.
+    \item $\delta_{SN, \widehat{SN}}^{act}$ - współczynnik skuteczności połączenia synaptycznego $SN \leadsto \widehat{SN}$ (Definicja \ref{def:wspAkt}).
+\end{description}
+
+Dla zachowania integralności opisu przytoczony zostanie jeszcze wzór pozwalazjący obliczyć pobudzenie pojedynczego neuronu w chwili $t$ \cite[s. 227]{Horzyk}:
+
+\begin{equation}
+\begin{split}
+\label{eq:exc}
+exc_t^{SN} = NRF_{\alpha, \beta}^{SQR}(exc_{t-1}^{SN},\theta^{SN},x_1^t, \dots, x_k^t) =  \sum\limits_{k=1}^K w_k x_k^t +\\
+    + \begin{cases}
+    \alpha \cdot exc_{t-1}^{SN} + \frac{(\alpha - 1) \cdot \beta \cdot (exc_{t-1}^{SN})^2}{\theta^{SN}} & exc_{t-1}^{SN} < 0 \\
+    \alpha \cdot exc_{t-1}^{SN} + \frac{(1 - \alpha) \cdot \beta \cdot (exc_{t-1}^{SN})^2}{\theta^{SN}} & 0 \leq exc_{t-1}^{SN} < \theta^{SN} \\
+    - \beta \cdot \theta^{SN} & exc_{t-1}^{SN} \geq \theta^{SN}
+    \end{cases}
+\end{split}
+\end{equation}
+,gdzie
+\begin{description}
+    \item $\alpha$ reluguje szybkość relaksacji neuronu, czyli jego powracanie do stanu spoczynku. Przyjmuje się $0 \leq \alpha < 1$. Wzrost
+    wartości tego współczynnika wpływa na wydłużenie okresu relaksacji.
+    \item $\beta$ odpowiada za czas relaksacji neuronu w stanach podprogowych i poaktywacyjnych. Przyjmuje się $0.5 \leq \beta < 1$.
+    \item $\theta^{SN}$ to próg aktywacji neuronu. Przyjmuje się $\theta = 1$.
+\end{description}
+
+
+
+
 
  
 

@@ -27,6 +27,12 @@
 \contentsline {subsection}{\numberline {3.2.2}Przedstawienie danych w postaci AGDS}{22}
 \contentsline {section}{\numberline {3.3}Aktywne asocjacyjne grafy neuronowe}{25}
 \contentsline {section}{\numberline {3.4}Neuroasocjacyjne grafy wiedzy ANAKG}{26}
-\contentsline {chapter}{\numberline {4}Implementacja}{27}
-\contentsline {chapter}{\numberline {5}Asocjacyjna wyszukiwarka internetowa}{29}
-\contentsline {chapter}{\numberline {6}Podsumowanie}{31}
+\contentsline {chapter}{\numberline {4}Implementacja}{29}
+\contentsline {section}{\numberline {4.1}Wymogi i za\IeC {\l }o\IeC {\.z}enia}{29}
+\contentsline {subsection}{\numberline {4.1.1}Budowa}{29}
+\contentsline {subsection}{\numberline {4.1.2}Wej\IeC {\'s}cie/wyj\IeC {\'s}cie}{30}
+\contentsline {subsection}{\numberline {4.1.3}Wymagania instalacyjne}{31}
+\contentsline {section}{\numberline {4.2}Opis komponent\IeC {\'o}w 1. - 4.}{31}
+\contentsline {subsection}{\numberline {4.2.1}Konfiguracja}{32}
+\contentsline {chapter}{\numberline {5}Asocjacyjna wyszukiwarka internetowa}{35}
+\contentsline {chapter}{\numberline {6}Podsumowanie}{37}

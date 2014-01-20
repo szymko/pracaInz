@@ -1,33 +1,33 @@
 \chapter{Pozyskiwanie treści z Internetu}
 \label{cha:pozyskiwanieTresci}
 
-Pozyskiwaniem treści z sieci zajmuje się grupa oprogramowania nazywana sieciowymi pająkami(ang. \emph{web crawlers}, \emph{web spiders}) lub sieciowymi robotami(ang. \emph{web robots}). Danymi wejściowymi jest zazwyczaj grupa stron, a właściwie adresów URL, nazywana \textbf{seedem} \cite{webCrawling}. Ich zadanie zazwyczaj nie ogranicza się do pobrania jednej strony, ale do trawersowania całej sieci, bądź w celu pozyskania konkretnych informacji, bądź w celu jej eksploracji. Przy czym w związku z ilością danych dostępnych w Internecie zazwyczaj zakłada się pewne filtry i ograniczenia, w celu zwiększenia efektywności robota i zwiększenia szans na odwiedziny najbardziej wartościowych, dla danego zastosowania, stron.
+Pozyskiwaniem treści z sieci zajmuje się grupa oprogramowania nazywana sieciowymi pająkami(ang. \emph{web crawlers}, \emph{web spiders}) lub sieciowymi robotami(ang. \emph{web robots}). Danymi wejściowymi jest zazwyczaj grupa stron, a właściwie adresów URL, nazywana \emph{seedem} \cite{webCrawling}. Ich zadanie zazwyczaj nie ogranicza się do pobrania jednej strony, ale do trawersowania całej sieci, bądź w celu pozyskania konkretnych informacji, bądź w celu jej eksploracji. Przy czym w związku z ilością danych dostępnych w Internecie zazwyczaj zakłada się pewne filtry i ograniczenia, w celu zwiększenia efektywności robota i zwiększenia szans na odwiedziny najbardziej wartościowych, dla danego zastosowania, stron.
 
-W związku z dynamiczną naturą Internetu, koniecznym jest ciągłe odświeżanie posiadanych już informacji, poszukiwanie nowych stron i ew. eliminacja witryn, które juz nie funkcjonują. Wpływa to na charakterystykę działania pająków internetowych i oprogramowania z nimi współpracującego, które musi być w stanie stale przetwarzać dużą ilość informacji w krótkim czasie. W związku z ogromną ilością danych wymagana jest również pełna automatyzacja działania i samodzielne podejmowanie decyzji o odwiedzanych w danym czasie witrynach.
+W związku z dynamiczną naturą Internetu, koniecznym jest ciągłe odświeżanie posiadanych już informacji, poszukiwanie nowych stron i ew. eliminacja witryn, które juz nie funkcjonują. Wpływa to na charakterystykę działania pająków internetowych i oprogramowania z nimi współpracującego, które musi być w stanie stale przetwarzać dużą ilość informacji w krótkim czasie. W związku z nieprzerwanym przepływem danych wymagana jest również pełna automatyzacja działania i samodzielne podejmowanie decyzji o odwiedzanych w danym czasie witrynach.
 
-Zadanie, które wykonują roboty internetowe jest tylko z pozoru proste. W istocie zawiera w sobie wiele innych, jak utrzymywanie połączeń sieciowych i obsługa częstych błedów, unikanie "pułapek na pająki" związanych z cyklami w strukturze sieci, czy przestrzeganie względów etycznych. Nie dziwi zatem pogląd założycieli firmy Google, którzy w jednym z artykułów stwierdzili, iż robot sieciowy jest najbardziej wyszukanym i najwrażliwszym komponentem wyszukiwarki internetowej\cite{BrinLawrence}.
+Zadanie, które wykonują roboty internetowe jest tylko z pozoru proste. W istocie zawiera w sobie wiele innych, jak utrzymywanie połączeń sieciowych i obsługa częstych błedów, unikanie ``pułapek na pająki'', czy przestrzeganie względów etycznych. Nie dziwi zatem pogląd założycieli firmy Google, którzy w jednym z artykułów stwierdzili, iż robot sieciowy jest najbardziej wyszukanym i najwrażliwszym komponentem wyszukiwarki internetowej\cite{BrinLawrence}.
 
 %------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \section{Zasotsowania robotów internetowych}
 \label{sec:podzialRobotow}
-Roboty internetowe można podzielić, wg wykonywanego zadania i zastosowań. Wszystkie kategorie charakteryzują się podobnym algorytmem pobierania stron, główne różnice wynikają z wyboru listy adresów do odwiedzenia, jak i ze sposobów priorytetyzacji pobierania informacji z posiadanej kolekcji URLi.
+Roboty internetowe można podzielić wg wykonywanego zadania i zastosowań. Wszystkie kategorie charakteryzują się podobnym algorytmem pobierania stron, główne różnice wynikają z wyboru listy adresów do odwiedzenia, jak i ze sposobów priorytetyzacji pobierania informacji z posiadanej kolekcji URLi.
 
 \subsection{Przeszukiwanie uniwersalne}
 \label{subsec:przUniw}
 Roboty \textbf{uniwersalne} (ang. \emph{unviersal}) \cite[s. 311-315]{webMining} mają za zadanie przeszukiwanie sieci, w celach eksploracyjnych i zazwyczaj służą wyszukiwarkom internetowym(Google, Bing, DuckDuckGo itd.).
 
-Roboty \textbf{przeszukujące wszerz} mają za zadani zebranie informacji o jak największej ilości dokumentów, reprezentujących zasoby całej dostępnej sieci. Ich nazwa bierze się z analogii zadań przeszukiwania sieci i przeszukiwania grafu. Zazwyczaj stawiany jest też wymóg wysokiej jakości odwiedzanych stron, co może stać w sprzeczności do wymogu szeroko zakrojonej penetracji Internetu \cite{webCrawling}.
+Roboty \textbf{przeszukujące wszerz} mają za zadanie zebranie informacji o jak największej ilości dokumentów, reprezentujących zasoby całej dostępnej sieci. Ich nazwa bierze się z analogii zadań przeszukiwania sieci i przeszukiwania grafu. Zazwyczaj stawiany jest też wymóg wysokiej jakości odwiedzanych stron, co może stać w sprzeczności do wymogu szeroko zakrojonej penetracji Internetu \cite{webCrawling}.
 
-Roboty \textbf{przeszukujące wgłab} \cite{webCrawling} starają się odwiedzać strony odpowiadające w określony sposób potrzebom aplikacji. Sposób doboru stron może różnić się w zależności od zastosowań: od prostych reguł dotyczących podzbioru adresów URL, domen, rozszerzeń plików, czy używanego języka. 
+Roboty \textbf{przeszukujące wgłab} \cite{webCrawling} starają się odwiedzać strony odpowiadające w określony sposób potrzebom aplikacji. Sposób doboru stron zazwyczaj dotyczy prostych reguł dotyczących podzbioru adresów URL, domen, rozszerzeń plików, czy używanego języka. 
 
 \subsection{Przeszukiwanie skupione}
 \label{subsec:przSkup}
-Kolejny rodzaj robotów przeszukujących sieć stanowią roboty \textbf{skupione} (ang, \emph{focused}) \cite{FocusedCrawlers}. Ich zadaniem jest zbieranie informacji o stronach należących do danej, z góry określonej, dziedziny. W tym celu wykorzystuje się często algorytmy uczenia maszynowego i sztucznej inteligencji\cite[s. 327-330]{webMining}, które na podstawie zapytania lub znanego podzbioru dokumentów należących do interesującej użytkownika dziedziny, określają przydatność dokumentów pobieranych przez robota. Przeszukiwanie w ten sposób może odbywać się albo trybie \emph{batchowym}, polegającym na pobieraniu i ocenianiu wielu stron dla zadanych z góry kategorii, niezależnych bezpośrednio od użytkownika, albo w trybie \emph{online}, w odpowiedzi na konkretne zapytanie.
+Kolejny rodzaj robotów przeszukujących sieć stanowią roboty \textbf{skupione} (ang. \emph{focused}) \cite{FocusedCrawlers}. Ich zadaniem jest zbieranie informacji o stronach należących do danej, z góry określonej, dziedziny. W tym celu wykorzystuje się często algorytmy uczenia maszynowego i sztucznej inteligencji\cite[s. 327-330]{webMining}, które na podstawie zapytania lub znanego podzbioru dokumentów należących do interesującej użytkownika dziedziny, określają przydatność dokumentów pobieranych przez robota. Przeszukiwanie w ten sposób może odbywać się albo trybie \emph{batchowym}, polegającym na pobieraniu i ocenianiu wielu stron dla zadanych z góry kategorii, niezależnych bezpośrednio od użytkownika, albo w trybie \emph{online}, w odpowiedzi na konkretne zapytanie.
 
 \subsection{Eksploracja struktury sieci}
 \label{subsec:eksplStr}
-Crawlery używane są również do badania struktury Internetu i sposobu w jaki zmienia się on w czasie. Ten typ zastosowań jest szczególnie wrażliwy na sposób wybierania kolejnych stron i zbiór punktów startowych. Zostało pokazane \cite{biasedCrawlers}, iż niewłaściwie dobrane adresy stron startowych prowadzą do obrazu sieci niezgodnego ze stanem faktycznym.
+Crawlery używane są również do badania struktury Internetu i sposobu w jaki zmienia się on w czasie. Ten typ zastosowań jest szczególnie wrażliwy na sposób wybierania kolejnych stron i zbiór punktów startowych. Zostało pokazane \cite{biasedCrawlers}, iż niewłaściwie dobrane adresy stron startowych prowadzą budowania do obrazu sieci niezgodnego ze stanem faktycznym.
 
 \subsection{Mirroring}
 \label{subsec:mirroring}
@@ -50,7 +50,7 @@ Diagram blokowy 2.1 przedstawia sekwencyjny algorytm działania pająka internet
 \subsection{Algorytm}
 \label{subsec:algorytmPajaka}
 
-Przy inicjalizacji robota na wejście podawany jest zestaw adresów URL, stanowiących tzw \emph{seed}. Używane są one do inicjalizacji bierzącej unikalnej listy adresów URL czekających na odwiedzenie (ang. \emph{frontier}). W kazdej iteracji crawler zdejmuje pierwszy adres z listy i pobiera stronę znadjującą 
+Przy inicjalizacji robota na wejście podawany jest zestaw adresów URL, stanowiących tzw \emph{seed}. Używane są one do inicjalizacji bierzącej listy unikalnych adresów URL czekających na odwiedzenie (ang. \emph{frontier}). W kazdej iteracji crawler zdejmuje pierwszy adres z listy i pobiera stronę znadjującą 
 się pod tym adresem. Następnie następuje ekstrakcja adresów URL znajdujących sie na stronie, normalizacja ich i zapis do listy adresów czekających na odwiedzenie. Finalnie, źródło strony zapisywane jest w lokalnym systemie plików i crawler jest gotowy do pobrania kolejnej witryny.
 
 Zazwyczaj algorytm kończy działanie po pobraniu ustalonej z góry ilości stron. Inną możliwością zakończenia działania jest opróżnienie listy oczekujących adresów URL, ale jest to mało prawdopodne, ze względu na dużą ilość linków - średnio jest to dziesięć adresów URL na stronę\cite[s.312]{webMining}.
@@ -80,7 +80,7 @@ i \textbf{skupionych} używana jest kolejka priorytetowa, z priorytetem przypisa
 \subsection{Uwagi implementacyjne}
 \label{subsec:uwagiImplement}
 
-W związku z ilością scenariuszy możliwych do napotkania przy trawersowaniu sieci, jak i dużą ilością danych, która program przetwarza,
+W związku ze znaczną ilością scenariuszy możliwych do napotkania przy trawersowaniu sieci, jak i dużą ilością danych, która program przetwarza,
 stosowane są dodatkowe zabiegi, zwiększające szanse poprawnego działania aplikacji.
 \begin{enumerate}
     \item Stosowanie ścisłej kontroli nad ściąganiem stron: ograniczenie czasu trwania połączenia(stosowanie \emph{timeoutów}),
@@ -93,9 +93,9 @@ stosowane są dodatkowe zabiegi, zwiększające szanse poprawnego działania apl
           \emph{lematyzacja}~sprowadzenie do podstawowej formy  gramatycznej i 
           \emph{stemming}~utworzenie tzw. rdzenia słowa, części wspólnej słów niosących podobną informację \cite{lemStem}.
     \item Doprowadzenie linków do postaci kanonicznej. Przede wszystkim należy zapewnić przedstawienie wszystkich URLi w postaci aboslutnej. Ponadto stosowane
-          są heurystyki związane np. z usuwaniem numeru portu, o ile figuruje w danym adresie, pozbywaniem się nieznaczących sufiksów oznaczających 
+          są heurystyki związane np. z usuwaniem numeru portu, o ile figuruje w danym adresie, pozbywaniem się nic nieznaczących sufiksów oznaczających 
           typ dokumentu(np. .html), czy usuwanie tzw. fragmentu - części adresu następującej po znaku ``\#''.
-    \item Unikanie tzw. pułapek na pająki (ang. \emph{spide-traps}). \emph{Pułapka na pająki} to strona, która generuje dynamicznie nieskończenie wiele 
+    \item Unikanie tzw. pułapek na pająki (ang. \emph{spide-traps}). \textbf{Pułapka na pająki} to strona, która generuje dynamicznie nieskończenie wiele 
           adresów URL prowadzących do niej samej \cite{spiderTraps}. Przykładem takiej witryny jest aplikacja kalendarza, który generuje linki do stron
           przedstawiających poprzednie lub następne przedziały czasu. Aby uniknąć nieskończonej pętli stosuje się różnego rodzaju heurystyki,
           np.~określa się górny limit ilości pobrań z danej domeny. Ma to jendak negatywny wpływ na aktualność informacji pobieranych ze stron
@@ -120,12 +120,12 @@ stosowane są dodatkowe zabiegi, zwiększające szanse poprawnego działania apl
 
 Oprócz efektywnego sposobu pobierania informacji z sieci, ważne jest również zrozumienie cech posiadanego zbioru stron internetowych i jego ewaluacja.
 W tym przypadku dąży się zarówno do minimalizacji nieaktualnych informacji o witrynach internetowych, jak i do maksymalizacji ilości informacji o stronach
-w ogóle. Szczególnie ważne jest szybkie reagowanie na zmiany(dodanawanie nowych dokumentów, edycję i usuwanie istniejących), które w wypadku sieci postępują
+w ogóle. Szczególnie ważne jest szybkie reagowanie na zmiany(dodawanie nowych dokumentów, edycję i usuwanie istniejących), które w wypadku sieci postępują
 nadzwyczaj gwałtownie.
 
 \subsection{Świeżość i wiek}
 \label{subsec:swiezoscWiek}
-Szczególnie ważnym zagadnieniem jest \textbf{świeżość} (ang. \emph{freshness}) \cite{webMining,webCrawling}. Miara ta jest określona dla pobranej strony \emph{p} w chwili \emph{t} jako
+Ważną cechą stron jest \textbf{świeżość} (ang. \emph{freshness}) \cite{webMining,webCrawling}. Miara ta jest określona dla pobranej strony \emph{p} w chwili \emph{t} jako
     \begin{equation}
         F_p(t) = 
         \begin{cases}
@@ -156,7 +156,7 @@ zmian zapisanej strony, wszystkie dokumenty odświeżane są z taką samą częs
 \cite{freshAge} kosztem dopuszczenia możliwości posiadania nieaktualnych wersji pewnych nadzwyczaj często zmieniających się stron. 
 
 Można również stosować inne podejście, które głosi, iż częstotliwość pobierania strony powinna być proporcjonalna do częstotliwości jej zmian w czasie.
-Wprawdzie takie podejście sprawdza się dla witryn edytowanych regularnie, jednak nadużywane prowadzi do zbyt częstych, nieprzynoszących nowych informacji, 
+Wprawdzie takie podejście sprawdza się dla witryn edytowanych regularnie, jednak nadużywane prowadzi do zbyt częstych, nieprzynoszących nowych informacji
 odwiedzin adresów historycznie zmieniających się z dużą częstotliwością. \cite{freshAge}.
 
 Mimo, iż pierwsze podejście jest bliższe optymalnemu, najlepsze rezultaty daje określenie rozkładu prawdopodobieństwa zmian dla poszczególnych witryn i 
@@ -222,7 +222,7 @@ kolekcję danych w sposób optymalny.
 \label{sec:etyczne}
 Jak wspomniano wcześniej, crawlery używane są w wielu przydatnych zastosowaniach. W związku z tym inwestuje się wiele czasu i pracy w zoptymalizowanie
 ich działania, od prostych zabiegów pobierania stron asynchronicznie, po zaawansowane technki modelowania rozkładu prawdopodobieństwa zmian na stronie.
-Nie należy jednak zapominać, iż działalność prfesjonalnych, bardzo wydajnych robotów internetowych nie pozostaje obojętna dla innych użytkowników 
+Nie należy jednak zapominać, iż działalność profesjonalnych, bardzo wydajnych robotów internetowych nie pozostaje obojętna dla innych użytkowników 
 sieci. Ruch generowany w ten sposób może znacznie obciążać serwery pobieranych stron, powodując kłopoty dla ich administratorów i klientów.
 Z tego powodu wprowadzono podstawowe zasady, którymi powinien kierować się każdy projektant oprogramowania trawersującego sieć. W momencie pisania
 tej pracy nie mają one podstaw prawnych, ale łamiąc je notorycznie można liczyć się z potępieniem środowiska i poważniejszymi konsekwencjami, jak np.~zablokowaniem
@@ -242,10 +242,11 @@ strony internetowej zawierającej infomracje o samym robocie oraz dane kontaktow
 \subsection{Robot exclusion protocol}
 \label{subsec:robotExcl}
 
-W celu zapewnienia kontroli nad zasobami, do których dostęp mają roboty internetowe, wpropwadzono protokół podstron wykluczonych z indeksowania
-\emph{ang. robot exclusion protocol}. Przyjmuje on formę statycznej strony internetowej serwowanej przez lokalny dla adres URL 
-\url{/robots.txt} \cite{robotsTxt}. Każda linia powinna mieć następujący format: \texttt{<pole>:<opcjonalnaspacja><wartosc><opcjonalnaspacja>}.
-Wg oficjalnej strony \cite{robotsTxt} \texttt{pole} może być zasąpione przez dwa ciągi znaków:
+W celu zapewnienia kontroli nad zasobami, do których dostęp mają roboty internetowe, wprowadzono protokół wykluczający z indeksowania
+(ang. \emph{robot exclusion protocol}). Przyjmuje on formę statycznej strony internetowej serwowanej przez lokalny dla serwisu adres URL 
+\url{/robots.txt} \cite{robotsTxt}. Ma ona podobny układ, jak plik \texttt{.txt}, składając się z wielu
+następujacych po sobie linii. Każda linia powinna mieć następujący format: \texttt{<pole>:<opcjonalnaspacja><wartosc><opcjonalnaspacja>}.
+Wg oficjalnej strony \cite{robotsTxt} \texttt{pole} może być zastąpione przez dwa ciągi znaków:
 \begin{itemize}
     \item \texttt{User-agent:} - ciąg znaków odnoszący się do wartość nagłówka \texttt{user-agent} w zapytaniu. Podana dalej wartość identyfikuje
      poszczególne roboty, lub ich grupy. Oznaczanie grup robotów jest możliwe dzięki znakowi szczególnemu ``*'', który oznacza zero lub więcej

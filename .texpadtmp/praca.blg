@@ -7,6 +7,7 @@ A level-1 auxiliary file: rozdzial4.aux
 A level-1 auxiliary file: rozdzial5.aux
 A level-1 auxiliary file: rozdzial6.aux
 A level-1 auxiliary file: rozdzial7.aux
+A level-1 auxiliary file: rozdzial8.aux
 The style file: plain.bst
 Database file #1: ../bibliografia.bib
 Name 1 in "Soumen Chakrabarti, Martin van den Berg, and Byron Dom" has a comma at the end for entry FocusedCrawlers
@@ -23,7 +24,7 @@ Name 1 in "Soumen Chakrabarti, Martin van den Berg, and Byron Dom" has a comma a
 while executing---line 1090 of file plain.bst
 You've used 15 entries,
             2118 wiz_defined-function locations,
-            599 strings with 6108 characters,
+            600 strings with 6121 characters,
 and the built_in function-call counts, 3654 in all, are:
 = -- 344
 > -- 153

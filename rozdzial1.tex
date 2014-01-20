@@ -1,11 +1,11 @@
 \chapter{Wprowadzenie}
 \label{cha:wprowadzenie}
 
-Wraz z rozpowszechnieniem dostępu do Internetu, można zauważyć zwiększenie ilości produkowanych informacji. Jak wynika z przygotowanego przez organizację IDC raportu, między latami 2009, a 2020, przewiduje się 44 krotny wzrost ilości danych dostępnych w sieci \cite{DigUni}. Jednym z najbardziej odczuwalnych skutków wzrostu ilości i dostępności danych, dotykający również przedsiębiorstwa, jest tzw. \emph{Information Overload}, czyli nadmiar czynników branych pod uwagę  w różnych procesach decyzyjnych. Wpływa to na obniżenie dynamiki, innowacyjności i konkurencyjności na rynku i ma wyraźny negatywny wpływ na gospodarkę \cite{InfOver}.
+Wraz z rozpowszechnieniem dostępu do Internetu, można zauważyć zwiększenie ilości produkowanych informacji. Jak wynika z przygotowanego przez organizację IDC raportu, między latami 2009, a 2020, przewiduje się 44 krotny wzrost ilości danych dostępnych w sieci \cite{DigUni}. Jednym z najbardziej odczuwalnych skutków wzrostu ilości i dostępności danych, dotykającym również przedsiębiorstwa, jest tzw. \emph{Information Overload}, czyli nadmiar czynników branych pod uwagę  w różnych procesach decyzyjnych. Wpływa to na obniżenie dynamiki, innowacyjności i konkurencyjności na rynku i ma wyraźny negatywny wpływ na gospodarkę \cite{InfOver}.
 
-Z drugiej strony, łatwo dostępne i zróżnicowane dane mogą służyć jako podstawa rozwoju, dając przede wszystkim dostęp do ogromnej bazy wiedzy zgromadzonej w sieci, jak i umożliwiając przedsiębiorcom zdobycie wiedzy o kosnumentach, łatwiejsze badanie rynku i dostosowanie oferowanych usług do potrzeb klientów \cite[s. 1-26]{DMining}.
+Z drugiej strony, łatwo dostępne i zróżnicowane dane mogą służyć jako podstawa rozwoju, dając przede wszystkim dostęp do ogromnej bazy wiedzy zgromadzonej w sieci, jak i umożliwiając przedsiębiorcom poszerzenie wiadomości o konsumentach, łatwiejsze badanie rynku i dostosowanie oferowanych usług do potrzeb klientów \cite[s. 1-26]{DMining}.
 
-Głównym problemem zatem pozostaje kwestia sposobu porządkowania i filtracji dostępnych danych, w celu ich wykorzystania. Klasycznym przykładem aplikacji służacej do tego celu jest \emph{wyszukiwarka~internetowa} - witryna dostępna w sieci, która umożliwia przeszukiwanie Internetu pod kątem wprowadzanych przez użytkownika zapytań.
+Głównym problemem pozostaje kwestia sposobu porządkowania i filtracji dostępnych danych, w celu ich wykorzystania. Klasycznym przykładem aplikacji służacej do tego celu jest \emph{wyszukiwarka~internetowa} - witryna dostępna w sieci, która umożliwia przeszukiwanie Internetu pod kątem wprowadzanych przez użytkownika zapytań.
 
 %---------------------------------------------------------------------------
 
@@ -14,11 +14,8 @@ Głównym problemem zatem pozostaje kwestia sposobu porządkowania i filtracji d
 
 Celem poniższej pracy jest zaproponowanie rozwiązania porządkującego dane pochodzące z sieci internetowej i przechowującego je w postaci grafu asocjacyjnego - AGDS \cite[s. 112-117]{Horzyk}.
 
-Poruszone zostają kwestie budowy oprogramowania eksplorującego sieć i pobierającego treść stron, przechowywania tak zdobytych informacji i przetwarzania ich w celu umieszczenia w grafie. Przedstawione zostają argumenty przemawiające za takim rozwiązaniem, poddana dyskusji zostaje różnica pomiędzy proponowanym podejściem, a rozwiązaniami wiodącymi obecnie prym w zastosowaniach komercyjnych.
-%
-%Zaprezentowany  zostaje algorytm budowania sieci AGDS, poruszone zostają szczegóły implementacyjne poszczególnych elementów składowych aplikacji. Wyjaśnia się jej architekturę i zabiegi zastosowane w celu zwiększenia modułowości i separacji kodu, opisane zostają perspektywy rozwoju. Przybliża się również 
-
-Ponadto zaproponowano wykorzystanie tak przechowywanych danych do budowy prostej asocjacyjnej wyszukiwarki internetowej, opartej o neuroasocjacyjne grafy wiedzy ANAKG\cite[s. 223-244]{Horzyk}. 
+Poruszone zostają kwestie budowy oprogramowania eksplorującego sieć i pobierającego treść stron, przechowywania tak zdobytych informacji i przetwarzania ich w celu umieszczenia w grafie. Pokrótce omówione zostają zostają fundamenty teoretyczne takiego rozwiązania, założenia projektowe,
+implementacja i działanie gotowej aplikacji. Ponadto przedstawione są zalety wykorzystywania tego rozwiązania w praktyce. \newpage
 
 
 %---------------------------------------------------------------------------
@@ -28,13 +25,14 @@ Ponadto zaproponowano wykorzystanie tak przechowywanych danych do budowy prostej
 
 W rodziale~\ref{cha:pozyskiwanieTresci} przedstawiono podstawowe informacje dotyczące pozyskiwania danych z witryn internetowych. Zilustrowane są podstawowe wymagania stawiane przed oprogramowaniem trawersującym sieć, tzw. \emph{crawlerem}, poruszone są kwestie wydajności, poprawnej implementacji, oraz opisane są względy etyczne, którymi należy się kierować przy korzystaniu z takiego oprogramowania.
 
-Rozdział~\ref{cha:przetwarzanieDanych} ma na celu opisanie problemów dotyczących ekstrakcji danych z dokumentu HTML. Zawiera on krótki opis formatu, przestawia jego zastowania i wyjaśnia, dlaczego poprawne uzyskiwanie informacji ze źródeł stron internetowych nie jest zadaniem trywialnym. Ponadto, zilustrowane są różne podejścia do parsowania zawartości dokumentów HTML, jak i przedstawiona jest pokrótce nomenklatura różnych typów stron, w kontekście wyszukiwarek internetowych.
-
 Rozdział~\ref{cha:budowaGrafu} prezentuje podstawowe informacje o asocjacyjnych grafach AGDS. Wyjaśnia powód zainteresowania takimi strukturami, wskazuje na ich zalety, przedstawia sposób tworzenia struktur i przytacza przykładowe grafy stworzone za pomocą oprogramowania będącego częścią projektu. Stara się również przedstawić konsekwencje sposobów budowy grafu i możliwość uzyskiwania informacji, zawartych w takich strukturach.
 
-Następnie, w rozdziale~\ref{cha:implementacja}, opisane są szczegóły implementacyjne aplikacji realizującej cele pracy. Wyjaśnione są szczegóły architektury, przytoczone zalety wybranch technologii, poruszony jest temat wydajności oprogramowania. Przedstawione jest również działanie całej aplikacji, wraz z wyjaśnieniem założeń testowych.
+Rozdział~\ref{cha:projekt} dotyczy założeń projektowych aplikacji. Przybliżona zostaje architektura, niektóre założenia techniczne i wytyczne implementacyjne.
 
-Rozdział \ref{cha:wyszukiwarka} przedstawia aplikację wykorzystującą graf AGDS i zbudowaną w oparciu o niego sieć neuronową ANAKG do wyszukiwania stron internetowych. Przedstawia on podstawowe założenia stojące za budową sieci ANAKG, algorytm jej pobudzania, jak i sposób interpretacji wyników. Podjęta jest również próba ilustracji odpowiedzi sieci dla różnych parametrów symulacji.
+Następnie, w rozdziale~\ref{cha:implementacja}, opisane są szczegóły implementacyjne aplikacji realizującej cele pracy. Przytoczone są zalety wybranych technologii, poruszony jest temat instalacji i uruchomienia oprogramowania.
+
+Rozdział \ref{cha:testy} przedstawia preprowadzone testy oprogramowania, przedstawia wynik działania aplikacji zarówno dla kontrolowanych danych testowych,
+jak i dla danych pobranych z sieci.
 
 
 

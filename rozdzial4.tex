@@ -2,8 +2,8 @@
 \label{cha:budowaGrafu}
 
 Przedstawione w rozdziale \ref{cha:pozyskiwanieTresci} oprogramowanie umożliwia efektywne pobieranie wiadomości z sieci, daje możliwość odświeżania posiadanych informacji
-i roszerzania kolekcji dokumentów o nowe pozycje. Rzadko jednak przechowywanie danych jest celem aplikacji. Oprócz programów archiwizujących, zazwyczaj pobranie dokumentu jest pierwszym
-etapem algorytmu przetwarzającego dane. Dobrym przykładem jest wyszukiwarka internetowa, w której ważna jest zarówno ilość pobranych stron i ich reprezentatwyność na tle całej sieci, jak
+i roszerzania kolekcji dokumentów o nowe pozycje. Rzadko jednak przechowywanie danych jest celem samym w sobie. Oprócz programów archiwizujących, zazwyczaj pobranie dokumentu jest pierwszym
+etapem algorytmu przetwarzającego dane. Dobrym przykładem jest wyszukiwarka internetowa, w której ważna jest zarówno ilość pobranych stron i ich reprezentatywność na tle całej sieci, jak
 i algorytm oceny przydatności poszczególnych dokumentów.
 
 Jednym z najważniejszych aspektów tworzenia dobrego silnika przetwarzającego dane jest wybór odpowiedniej, przystosowanej do
@@ -25,15 +25,15 @@ usługa Graph Search udostępniana prez portal Facebook -\url{https://www.facebo
 które decydują o jego rosnącej popularności \cite{graphDb}:
 \begin{enumerate}
     \item \textbf{Szybkość} - wyszukanie danych o relacjach pojedynczego wierzchołka nie wymaga kosztownych operacji \emph{join} na całych tabelach,
-    dostęp do danych jest szybki. Nawet w przypadku wzrostu liczby wierzchołków, czas wykonywania większości zapytań nie zminia się, ponieważ dotyczą
+    dostęp do danych jest szybki. Nawet w przypadku wzrostu liczby wierzchołków, czas wykonywania większości zapytań nie zmienia się, ponieważ dotyczą
     one jedynie fragmentu bazy.
     \item \textbf{Elastyczność} - graf nie wymaga tak dogłębnego określenia struktury bazy, jak tradycyjna baza relacyjna. Dodawanie nowych relacji, 
-    węzłów, czy podgrafów jest stosunkowo proste i nie wymaga migracji. Dzięki temu możliwy jest bardziej dynamiczny rozwój aplikacji opartych o bazy grafowe.
+    węzłów, czy podgrafów jest stosunkowo proste i nie wymaga migracji. Dzięki temu, możliwy jest bardziej dynamiczny rozwój aplikacji opartych o bazy grafowe.
 \end{enumerate}
 
-Warto wspomnieć, iż są aplikacje, dla których bazy grafowe są niezastapione, choćby ze względu na ograniczenia szybkości baz relacyjnych. Przykładem na to jest
-przytoczone w \cite{neo4jAction} oprogramowanie szukające relacji typu ``znajomy znajomego'' w bazie użytkowników sieci społecznościowych. Dla około~1 000 000
-użytkowników posiadających średnio po 50 kontatków, baza grafowa - w tym przypadku Neo4j - okazała się szybsza o kilka rzędów wielkości od tradycyjnej bazy
+Warto wspomnieć, iż istnieją aplikacje, dla których bazy grafowe są niezastapione, choćby ze względu na ograniczenia szybkości baz relacyjnych. Przykładem na to jest
+przytoczone w \cite{neo4jAction} oprogramowanie szukające relacji typu ``znajomy znajomego'' w bazie użytkowników sieci społecznościowych. Dla około~1~000~000
+użytkowników posiadających średnio po 50 kontaktów, baza grafowa - w tym przypadku Neo4j - okazała się szybsza o kilka rzędów wielkości od tradycyjnej bazy
 relacyjnej.
 
 \begin{table}[h!]
@@ -60,7 +60,7 @@ Zagnieżdżenie & RDBMS & Baza grafowa & Zwrócone rekordy\\
 \section{Asocjacyjne grafowe struktury danych}
 \label{sec:agds}
 Często \textbf{asocjacją} (skojarzeniem) nazywa się powiązanie ze sobą dwóch lub więcej zdefiniowanych wcześniej elementów. Zgodnie z \cite[s. 47]{Horzyk} 
-tą definicję można rozszerzyć, opierając się na charakterystyce biologicznych organizmów żywych. Zauważono, iż niektóre organizmy mają umiejętność
+tą definicję można rozszerzyć, opierając się na obserwacji biologicznych organizmów żywych. Zauważono, iż niektóre organizmy mają umiejętność
 powiązywania dostepnych dla siebie danych w skomplikowane sieci zależnośc(asocjacji). Do kryteriów, wg których skojarzenia są budowane, należą:
 \begin{enumerate}
     \item Miara podobieństwa. 
@@ -68,13 +68,13 @@ powiązywania dostepnych dla siebie danych w skomplikowane sieci zależnośc(aso
     \item Kontekst, w którym informacje się pojawiły.
 \end{enumerate}
 W związku z tym, iż organizmy żywe ciągle pozostają pod wieloma względami niedoścignione w wielu dziedzinach(np. jak analiza obrazu, czy mowy, gdy mowa o 
-człowieku), postanowiono podjąć próbę kosstrukcji sztucznych systemów asocjacycjnych naśladujących te występujące w naturze.
+człowieku), postanowiono podjąć próbę konstrukcji sztucznych systemów asocjacycjnych, naśladujących te występujące w naturze.
 
 \subsection{Definicja}
 \label{subsec:assocDef}
 
 Poniższe definicje \cite[s. 53-56]{Horzyk} opisują podstawowe elementy systemu asocjacyjnego. Na ich potrzebę można przyjąć, iż ma on ogólną budowę grafu mieszanego,
-w którego węzłach umieszczone są sztuczne neurony, a krawędzie odpowiadają synapsom(połączeniom międzyneuronalmy):
+w którego węzłach umieszczone są sztuczne neurony, a krawędzie odpowiadają synapsom(połączeniom międzyneuronalnym):
 
 \begin{definicja}
     \textbf{Relacją(asocjacyjną)} nazywamy każdą relację pomiędzy obiektami(węzłami) zapamiętywanymi i kojarzonymi ze sobą przez system asocjacyjny.
@@ -99,10 +99,10 @@ ASEQ związany jest z powtarzającymi się sekwencjami danych lub danymi pobudza
     następnych procesów skojarzeniowych, nazywa się \textbf{powiązaniami asocjacyjnego kontekstu} - \textbf{ACON}.
 \end{definicja}
 
-ACON to powiązanie niemal analogiczne do ASEQ, z tą różnicą, iż nie skutkuje ono od razu aktywacją neuronu, a tylko pełni funkcję wspomagającą.
+ACON to powiązanie niemal analogiczne do ASEQ, z tą różnicą, iż nie skutkuje ono od razu aktywacją neuronu, a pełni tylko funkcję wspomagającą.
 
 \begin{definicja}
-    Bezpośrednie połączenia od receptorów lub neuronów przekazujących dane wejściowe do neuronu, który reporezentuje niektóre kombinacje lub układy 
+    Bezpośrednie połączenia od receptorów lub neuronów przekazujących dane wejściowe do neuronu, który reprezentuje niektóre kombinacje lub układy 
     zbudowane z tych danych to \textbf{powiązania asocjacyjnego definiowania} - \textbf{ADEF}.
 \end{definicja}
 
@@ -129,8 +129,8 @@ W zapisie formalnym struktura AGDS jest to uporządkowana siódemka \linebreak \
 
 Krawędzie dwustronnie skierowane można przedstawić również jako parę krawędzi jednostronnie skierowanych.
 
-Struktura AGDS jest statyczna i stego względu nie można za jej pomocą modelować innych relacji asocjacyjcnych przedstawionych w \cite{Horzyk}.
-Typowo dane odwzorowywane są w niej za pomocą węzłów, natomiast krawędzie przedstaiają informację o ich wzajemnym powiązaniu, bazującym np.~na~częstotliwości
+Struktura AGDS jest statyczna i z tego względu nie można za jej pomocą modelować innych relacji asocjacyjcnych przedstawionych w \cite{Horzyk}.
+Typowo dane odwzorowywane są w niej za pomocą wierzchołków grafu(neuronów), natomiast krawędzie przedstawiają informację o ich wzajemnym powiązaniu, bazującym np.~na~częstotliwości
 występowania. Praca z grafem polega bądź na wykorzystaniu istniejących algorytmów przeszukiwania grafu w celu uzyskania interesujących informacji, bądź
 na przekstałceniu struktury AGDS do postaci grafów AANG - \textbf{aktywnych asocjacyjnych grafów neuronowych} i stosowaniu algorytmów asocjacyjnych.
 Ważnym założeniem charakterystycznym dla grafów asocjacyjnych jest unikalność informacji przechowywanej w węzłach. 
@@ -228,9 +228,9 @@ id & Nazwa & Cena\\
 \end{table}
 
 W przypadku używania relacyjnej struktury danych, łatwo zauważyc dwa istotne problemy. Gdy wprowadzona zostaje normalizacja, zazwyczaj informacje nie są duplikowane pomiędzy
-tabelami, wszystkie zależności wyrażone są w postaci relacji. Jednak operacje na takich zbiorach danych łączą się z koniecznością używania \emph{joinów}, które w wypadku
+tabelami, wszystkie zależności wyrażone są w postaci relacji. Jednak operacje na takich zbiorach danych łączą się z koniecznością używania złączeń, które w wypadku
 tabel o wielu rekordach dają duży narzut obliczeniowy(jak przedstawiono na \ref{tabela:neo4jAwesome}). W razie świadomej denormalizacji, jak w przypadku zilustrowanym w tabeli
-\ref{tabela:join} mogą występować problemy związane z niespójnością danych. Trundo wprowadzać do takiej struktury zmiany, jest ona podatna na różne anomalie.
+\ref{tabela:join}, mogą występować problemy związane z niespójnością danych. Trudno wprowadzać do takiej struktury zmiany, jest ona podatna na różne anomalie.
 
 Na rysunku \ref{graph:agds} przedstawiony jest ten sam zbiór danych, ale z wykorzystaniem struktur AGDS. Niewątpliwą zaletą takiego przedstawienia jest możliwość natychmiatowego
 otrzymania informacji o relacjach zachodzących między poszczególnymi obieketami. Otrzymanie infomracji o liscie prezentów użytkownika, wszystkich użytkownikach posiadających
